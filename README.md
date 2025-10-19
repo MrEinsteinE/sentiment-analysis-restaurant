@@ -6,7 +6,7 @@
 
 An AI-powered sentiment analysis system that classifies restaurant reviews as positive or negative using advanced machine learning and natural language processing techniques.
 
-![Demo Screenshot](images/gradio_screenshot.png)
+![Demo Screenshot](gradio_screenshot.png)
 
 ## 🚀 Live Demo
 
@@ -113,67 +113,6 @@ This project implements a **complete end-to-end machine learning pipeline** for 
 
 ---
 
-## 📁 Project Structure
-
-restaurant-sentiment-analysis/
-│
-├── README.md # Project documentation
-├── requirements.txt # Python dependencies
-├── LICENSE # MIT License
-├── .gitignore # Git ignore file
-│
-│ Advanced_Sentiment_Analysis_Complete.ipynb
-│
-├── app.py # Gradio web application
-│
-│ Restaurant_Reviews.tsv # Dataset (1000 reviews)
-│
-├── saved_models/
-│ ├── best_model.pkl # Best trained model
-│ ├── tfidf_vectorizer.pkl # Fitted vectorizer
-│ ├── text_preprocessor.pkl # Text preprocessor
-│ └── model_results.csv # Performance metrics
-│
-├── confusion_matrix.png
-├── roc_curves.png
-├── model_comparison.png
-
-text
-
----
-
-## 💻 Installation
-
-### Prerequisites
-
-- Python 3.8 or higher
-- pip package manager
-
-### Setup Instructions
-
-1. **Clone the repository**
-git clone https://github.com/MrEinsteinE/sentiment-analysis-restaurant.git
-cd restaurant-sentiment-analysis
-
-text
-
-2. **Create a virtual environment** (recommended)
-python -m venv venv
-source venv/bin/activate # On Windows: venv\Scripts\activate
-
-text
-
-3. **Install dependencies**
-pip install -r requirements.txt
-
-text
-
-4. **Download NLTK data**
-python -c "import nltk; nltk.download('stopwords'); nltk.download('wordnet'); nltk.download('omw-1.4')"
-
-text
-
----
 
 ## 🚀 Usage
 
@@ -197,34 +136,6 @@ text
 
 Then open your browser to `http://localhost:7860`
 
-### Option 3: Use the Live Demo
-
-Visit the deployed application: [Hugging Face Space Link]
-
-### Making Predictions (Python)
-
-import pickle
-import numpy as np
-
-Load models
-with open('saved_models/best_model.pkl', 'rb') as f:
-model = pickle.load(f)
-with open('saved_models/tfidf_vectorizer.pkl', 'rb') as f:
-vectorizer = pickle.load(f)
-with open('saved_models/text_preprocessor.pkl', 'rb') as f:
-preprocessor = pickle.load(f)
-
-Predict sentiment
-review = "The food was amazing and service was excellent!"
-cleaned = preprocessor.clean_text(review)
-vectorized = vectorizer.transform([cleaned])
-prediction = model.predict(vectorized)
-
-print(f"Sentiment: {'Positive' if prediction == 1 else 'Negative'}")
-
-text
-
----
 
 ## 🔬 Methodology
 
@@ -282,15 +193,15 @@ GridSearchCV used for the best model with parameters:
 
 ### Model Comparison
 
-![Model Comparison](images/model_comparison.png)
+![Model Comparison](model_comparison.png)
 
 ### Confusion Matrix
 
-![Confusion Matrix](images/confusion_matrix.png)
+![Confusion Matrix](confusion_matrix.png)
 
 ### ROC Curves
 
-![ROC Curves](images/roc_curves.png)
+![ROC Curves](roc_curves.png)
 
 ### Key Findings
 
@@ -339,9 +250,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - **Project**: ML-06-BML11
 - **Date**: October 2025
-- **LinkedIn**: [Your LinkedIn Profile](https://linkedin.com/in/einstein-ellandala/)
-- **GitHub**: [@yourhandle](https://github.com/MrEinsteinE)
-- **Email**: your.email@example.com
+- **LinkedIn**: [Einstein Ellandala](https://linkedin.com/in/einstein-ellandala/)
+- **GitHub**: [@MrEinsteinE](https://github.com/MrEinsteinE)
+- **Email**: einsteinellandala@gmail.com
 
 ---
 
